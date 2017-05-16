@@ -473,8 +473,8 @@ exports.default = {
         month: ''
       },
       library: {
-        week: this.option.week,
-        month: this.option.month,
+        week: this.option.week ? this.option.week : ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+        month: this.option.month ? this.option.month : ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         year: []
       },
       checked: {
@@ -490,7 +490,6 @@ exports.default = {
       selectedDays: []
     };
   },
-
   methods: {
     pad: function pad(n) {
       n = Math.floor(n);
